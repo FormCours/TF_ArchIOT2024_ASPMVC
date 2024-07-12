@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Recipe]
+(
+	[Id] INT IDENTITY,
+	[Name] NVARCHAR(50) NOT NULL,
+	[Desc] NVARCHAR(1000) NOT NULL,
+
+	CONSTRAINT PK_Recipe PRIMARY KEY([Id])
+)

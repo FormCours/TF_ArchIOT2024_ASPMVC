@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Recipe>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Recette</h1>
+
+    <h2>Liste</h2>
+    <ul>
+    @foreach(Recipe recipe in Model)
+    {
+        <li>
+                <a asp-action="Detail" asp-route-id="@recipe.Id" >@recipe.Name</a>
+        </li>   
+    }
+    </ul>
+
+</div>

@@ -1,0 +1,27 @@
+﻿@model RecipeForm
+
+@{
+    ViewData["Title"] = "Ajout d'une recette ♥";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Recette</h1>
+
+    <h2>Ajouter une nouvelle recette</h2>
+    <form method="post">
+        <div>
+            <label asp-for="Name"></label>
+            <input asp-for="Name" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div>
+            @Html.LabelFor(Model => Model.Desc)
+            @Html.EditorFor(Model => Model.Desc)
+            @Html.ValidationMessageFor(Model => Model.Desc, null, new { @class="text-danger" })
+        </div>
+        <div>
+            <button type="submit">Ajouter 🍕</button>
+        </div>
+    </form>
+
+</div>
