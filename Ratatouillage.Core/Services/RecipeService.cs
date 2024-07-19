@@ -31,14 +31,14 @@ namespace Ratatouillage.Core.Services
             if (recipe is null)
                 return null;
 
-            List<IngredientWithQuantity> ingredients = _RecipeRepository.GetIngredients(recipe.Id).ToList();
+            IEnumerable<IngredientWithQuantity> ingredients = _RecipeRepository.GetIngredients(recipe.Id);
 
             return new RecipeWithIngredient
             {
                 Id = recipe.Id,
                 Name = recipe.Name,
                 Desc = recipe.Desc,
-                Ingredients = ingredients
+                Ingredients = ingredients.ToList()
             };
         }
 

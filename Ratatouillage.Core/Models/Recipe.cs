@@ -9,6 +9,6 @@
 
     public class RecipeWithIngredient : Recipe
     {
-        public required List<IngredientWithQuantity> Ingredients { get; set; }
+        public required IEnumerable<IngredientWithQuantity> Ingredients { get; set; }
     }
 }

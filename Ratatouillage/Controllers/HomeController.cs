@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Ratatouillage.Core.Interfaces.Repository;
 using Ratatouillage.Core.Models;
+using Ratatouillage.Mappers;
 using Ratatouillage.Models;
 using System.Diagnostics;
 
@@ -21,7 +22,7 @@ namespace Ratatouillage.Controllers
         public IActionResult Index()
         {
             IEnumerable<Recipe> recipes = _RecipeService.GetAll();
-            return View(recipes);
+            return View(recipes.Select(r => r.ToViewModel()));
         }
 
         public IActionResult Detail([FromRoute] int id)
@@ -33,7 +34,7 @@ namespace Ratatouillage.Controllers
                 return NotFound();
             }
 
-            return View(recipe);
+            return View(recipe.ToViewModel());
         }
 
         public IActionResult Add()
@@ -49,18 +50,7 @@ namespace Ratatouillage.Controllers
                 return View();
             }
 
-            _RecipeService.Insert(new RecipeWithIngredient
-            {
-                // TODO : Faire le mapping dans une méthode (=> Dossier "Mapper" par exemple)
-                Id = 0,
-                Name = recipeForm.Name,
-                Desc = recipeForm.Desc,
-                Ingredients = new List<IngredientWithQuantity>
-                {
-                    new IngredientWithQuantity { Id= 9, Name= "Eau", Quantity =  "1 l" },
-                    new IngredientWithQuantity { Id= 0, Name= "Inconnue", Quantity =  "Une pincée" },
-                }
-            });
+            _RecipeService.Insert(recipeForm.ToModel());
 
             return RedirectToAction(nameof(Index));
         }

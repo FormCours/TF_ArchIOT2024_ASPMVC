@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Recipe>
+﻿@model IEnumerable<RecipeViewModel>
 
 @{
     ViewData["Title"] = "Home Page";
@@ -9,7 +9,7 @@
 
     <h2>Liste</h2>
     <ul>
-    @foreach(Recipe recipe in Model)
+    @foreach(RecipeViewModel recipe in Model)
     {
         <li>
                 <a asp-action="Detail" asp-route-id="@recipe.Id" >@recipe.Name</a>
