@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ratatouillage.Data.Repository
+namespace Ratatouillage.External.Repository
 {
     public abstract class RepositoryBase<TKey, TEntity>
     {

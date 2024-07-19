@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ratatouillage.Data.Repository
+namespace Ratatouillage.External.Repository
 {
     public class IngredientRepository : RepositoryBase<int, Ingredient>, IIngredientRepository
     {

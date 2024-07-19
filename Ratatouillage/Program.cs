@@ -1,7 +1,7 @@
 using Microsoft.Data.SqlClient;
 using Ratatouillage.Core.Interfaces.Repository;
 using Ratatouillage.Core.Services;
-using Ratatouillage.Data.Repository;
+using Ratatouillage.External.Repository;
 using System.Data;
 
 var builder = WebApplication.CreateBuilder(args);

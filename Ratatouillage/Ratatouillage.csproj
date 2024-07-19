@@ -12,7 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Ratatouillage.Core\Ratatouillage.Core.csproj" />
-    <ProjectReference Include="..\Ratatouillage.Data\Ratatouillage.Data.csproj" />
+    <ProjectReference Include="..\Ratatouillage.External\Ratatouillage.External.csproj" />
   </ItemGroup>
 
 </Project>

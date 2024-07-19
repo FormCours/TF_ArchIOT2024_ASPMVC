@@ -5,11 +5,11 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Ratatouillage.StructureDB", "Ratatouillage.Database\Ratatouillage.StructureDB.sqlproj", "{888B59BE-6F78-42D5-99F5-15CFE959D668}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ratatouillage.Core", "Ratatouillage.Core\Ratatouillage.Core.csproj", "{19F42386-2836-423A-92E3-644724352AE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ratatouillage.Core", "Ratatouillage.Core\Ratatouillage.Core.csproj", "{19F42386-2836-423A-92E3-644724352AE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ratatouillage.Data", "Ratatouillage.Data\Ratatouillage.Data.csproj", "{D82E48AF-8645-45FF-9729-A160533F2303}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ratatouillage.External", "Ratatouillage.External\Ratatouillage.External.csproj", "{D82E48AF-8645-45FF-9729-A160533F2303}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ratatouillage", "Ratatouillage\Ratatouillage.csproj", "{7E7FF265-8DE2-46ED-BC58-602D5BB99C47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ratatouillage", "Ratatouillage\Ratatouillage.csproj", "{7E7FF265-8DE2-46ED-BC58-602D5BB99C47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
